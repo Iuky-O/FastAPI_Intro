@@ -1,3 +1,11 @@
+# 🌟 Seja Bem-Vindo ao estudo de FASTAPI
+
+## O que preisa ter
+- Python 3.12
+
+## Links importantes
+https://fastapi.tiangolo.com/pt/virtual-environments/#verificando-um-ambiente-virtual
+
 ## Ambiente virtual
 
 ### Criação e ativação
