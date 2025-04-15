@@ -1,13 +1,2 @@
-# from pydantic import BaseModel, EmailStr
+#Aqui fica o schema do user (entrada e saida de dados)
 
-# class UsuarioCreate(BaseModel):
-#     nome: str
-#     email: EmailStr
-
-# class UsuarioOut(BaseModel):
-#     id: int
-#     nome: str
-#     email: EmailStr
-
-#     class Config:
-#         orm_mode = True
