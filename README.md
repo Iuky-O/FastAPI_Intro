@@ -3,6 +3,18 @@
 ## O que preisa ter
 - Python 3.12
 
+## Padrão de arquivos
+
+nome_tipo.extensão
+
+ex:
+
+```bash
+usuario_schema.py
+usuario_model.py
+usuario_view.py
+```
+
 ## Links importantes
 https://fastapi.tiangolo.com/pt/virtual-environments/#verificando-um-ambiente-virtual
 
@@ -15,6 +27,9 @@ python -m venv .venv
 ```
 ```bash
 .venv\Scripts\activate     # Windows
+```
+```bash
+deactivate
 ```
 
 ### Instalação
