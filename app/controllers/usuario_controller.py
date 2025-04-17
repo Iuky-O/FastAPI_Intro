@@ -37,3 +37,4 @@ def apagar_usuario(db: Session, user_id: int):
     
     db.delete(usuario)
     db.commit()
+
