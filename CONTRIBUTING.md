@@ -65,11 +65,19 @@ Em uma pasta onde deseja por seu repositório abra no terminal e faça:
 
 6. **Abrir um Pull Request (PR) da sua feature/* para a branch dev:**
 
+- Vá até o repositório e entre o **Compare e pull request** como na imagem:
+
+![alt text](image.png)
+
+- Depois mude a branch de mesclagem onde está **base: main** mude para dev
+
+![alt text](image-1.png)
+
 - Título do PR: vai ser o que envio no commit
 
 - Descreva claramente o que foi feito e o motivo.
 
-- Se foi criado uma variável de ambiente comunique
+- Se foi criado uma variável de ambiente comunique.
 
 7. **Merge na dev:**
 
