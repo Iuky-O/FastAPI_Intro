@@ -57,8 +57,37 @@ Em uma pasta onde deseja por seu repositório abra no terminal e faça:
 5. **Enviar sua branch para o repositório remoto:**
 
 - Envie as alterações para a SUA branch
+- Mescle com a branch de DEV
+
+5. 1. **Mescle com DEV:**
+
+- Vá até a branch Dev e baixe as atualizações
+- Volte pra sua branch de desenvolvimento
+- Mescle com dev com sua branch da desenvolvimento
+
+```bash
+    git checkout dev
+    git pull
+    git checkout feature/iuky-o/criacao-login
+```
+
+5. 2. **Envie suas alterações:**
 
 - Exemplo:
+```bash
+    git push -u origin feature/iuky-o/criacao-login
+```
+
+**OBS: caso dê CONFLITO:**
+- Resolva manualmente
+- Adicione as mudanças
+
+```bash
+    git add . ## OU git add caminho/do/seu/documento.py
+    git commit
+```
+- Faça o push
+
 ```bash
     git push -u origin feature/iuky-o/criacao-login
 ```
