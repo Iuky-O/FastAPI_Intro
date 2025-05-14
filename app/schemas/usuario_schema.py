@@ -1,5 +1,4 @@
 #Aqui fica o schema do user (entrada e saida de dados)
-
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 
