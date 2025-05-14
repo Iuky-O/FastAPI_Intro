@@ -1,8 +1,9 @@
-.venv/
-venv
 venv/
+.venv/
 .venv
+venv
 .env
 .pytest_cache/
 .ruff_cache/
 .secrets.toml
+db.sqlite3
