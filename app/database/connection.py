@@ -1,11 +1,8 @@
-# from sqlalchemy import create_engine
-# from sqlalchemy.orm import sessionmaker, declarative_base
-# from app.config import DATABASE_URL
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-# engine = create_engine(DATABASE_URL)
-# SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-# Base = declarative_base()
+from app.config import settings
 
-# def create_tables():
-#     from app.models import usuario_model  # Importa para registrar no Base
-#     Base.metadata.create_all(bind=engine)
+engine = create_engine(settings.db.uri)
+SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+Base = declarative_base()
