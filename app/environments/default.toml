@@ -1,0 +1,14 @@
+[default]                                   #deixa o ambiente como "default"
+
+[default.db]                                #configuração para poder acessar com settings.db
+uri = ""
+connect_args = {}                           #para compartilhar a conexão do DB entre múltiplas threads e não dar erro
+echo = false                                #modo silencioso, para não mostrar queries no terminal
+
+[default.security]
+
+# A Secret Key vai em .secrets.toml
+SECRET_KEY = ""
+ALGORITHM = "HS256"                         #algoritmo para fazer o hash da senha
+ACESS_TOKEN_EXPIRE_MINUTES = 30             #tempo de duração do hash
+REFRESH_TOKEN_EXPIRE_MINUTES = 600          #tempo de duração do refresh do "token"

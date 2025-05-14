@@ -2,8 +2,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.database.connection import SessionLocal
+from app.schemas.usuario_schema import UsuarioOut, UserPublic, UserUpdate, User
 from http import HTTPStatus
-from app.schemas.usuario_schema import User, UserPublic, UserUpdate, UsuarioOut
+
 from app.controllers.usuario_controller import (
         criar_usuario,
         listar_usuarios,
@@ -30,7 +31,7 @@ def listar(db: Session = Depends(get_db)):
     return listar_usuarios(db)
 
 @router.get("/{user_id}", response_model=UserPublic)
-def listar(user_id: int, db: Session = Depends(get_db)):
+def listar_por_id(user_id: int, db: Session = Depends(get_db)):
     return listar_usuarios_id(db, user_id)
 
 @router.put("/{user_id}", response_model=UserPublic)

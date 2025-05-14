@@ -1,5 +1,4 @@
 #Aqui fica o modelo do user (tabela do banco de dados)
-
 from sqlalchemy import Column, Integer, String
 from app.database.connection import Base
 

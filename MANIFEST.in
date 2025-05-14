@@ -1,0 +1,1 @@
+graft app  #para dizer ao setup.py que quando subir empacotar os arquivos que não sejam ".py" junto

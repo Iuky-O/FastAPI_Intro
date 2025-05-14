@@ -1,5 +1,4 @@
 #Aqui fica o controller do user (funções das rotas - views)
-
 from sqlalchemy.orm import Session
 from app.models.usuario_model import Usuario
 from app.schemas.usuario_schema import User
@@ -37,4 +36,3 @@ def apagar_usuario(db: Session, user_id: int):
     
     db.delete(usuario)
     db.commit()
-

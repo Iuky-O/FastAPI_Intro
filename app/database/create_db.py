@@ -1,4 +1,3 @@
-# create_db.py
 from app.database.connection import Base, engine
 
 def create_tables():

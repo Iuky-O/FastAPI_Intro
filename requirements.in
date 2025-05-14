@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+jinja2
+sqlalchemy
+sqlmodel
+typer
+dynaconf
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+pydantic[email]
+alembic
+psycopg2
