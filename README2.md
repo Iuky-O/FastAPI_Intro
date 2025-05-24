@@ -47,3 +47,37 @@ pip list
 
 ## No arquivo "default.toml" estão as variáveis de ambiente do sistema de acordo com sessões
 ### Ex: Futuramente poderemos apenas mudar o ambiente como "default", "production" e atualizar o sistema
+
+
+## Fluxo
+### Criação e ativação
+
+```bash
+python -m venv .venv
+```
+```bash
+.venv\Scripts\activate     # Windows
+```
+
+### Para desativar
+```bash
+deactivate
+```
+
+## Instalação do pip-tools
+```bash
+pip install pip-tools
+```
+
+## Demais passos
+```bash
+pip-compile requirements.in
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+pip list
+````

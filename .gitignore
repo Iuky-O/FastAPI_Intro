@@ -6,4 +6,7 @@ venv
 .pytest_cache/
 .ruff_cache/
 .secrets.toml
+secrets.toml
+settings.toml
+.settings.toml
 db.sqlite3
