@@ -5,8 +5,8 @@ from app.database.connection import Base
 class Usuario(Base):
     __tablename__ = "usuarios"
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
-    age = Column(Integer, nullable=False)
-    email = Column(String, unique=True, nullable=False)
-    password = Column(String, nullable=False)
+    id_usuario = Column(Integer, primary_key=True, index=True)
+    email = Column(String(45), unique=True, nullable=False)
+    senha = Column(String(45), nullable=False)
+    nome = Column(String(45), nullable=False)
+    telefone = Column(String(45), nullable=False)

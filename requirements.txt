@@ -10,6 +10,8 @@ annotated-types==0.7.0
     # via pydantic
 anyio==4.9.0
     # via starlette
+asyncpg==0.30.0
+    # via -r requirements.in
 bcrypt==4.3.0
     # via passlib
 cffi==1.17.1
@@ -22,6 +24,8 @@ colorama==0.4.6
     # via click
 cryptography==44.0.2
     # via python-jose
+databases==0.9.0
+    # via -r requirements.in
 dnspython==2.7.0
     # via email-validator
 dynaconf==3.2.10
@@ -56,6 +60,8 @@ passlib[bcrypt]==1.7.4
     # via -r requirements.in
 psycopg2==2.9.10
     # via -r requirements.in
+psycopg2-binary==2.9.10
+    # via -r requirements.in
 pyasn1==0.4.8
     # via
     #   python-jose
@@ -87,6 +93,7 @@ sqlalchemy==2.0.29
     # via
     #   -r requirements.in
     #   alembic
+    #   databases
     #   sqlmodel
 sqlmodel==0.0.24
     # via -r requirements.in
