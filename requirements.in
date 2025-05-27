@@ -11,3 +11,6 @@ pydantic
 pydantic[email]
 alembic
 psycopg2
+asyncpg
+databases
+psycopg2-binary
