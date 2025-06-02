@@ -5,6 +5,7 @@ from app.database.connection import Base
 class Administrador(Base):
     __tablename__ = "admin"
 
-    id_admin = Column(Integer, primary_key=True, index=True)
+    admin_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     nome = Column(String(45), nullable=False)
-    usuario_id = Column(Integer, ForeignKey("usuarios.id_usuario"), nullable=False)
+    
+    usuario = Column(Integer, ForeignKey("usuarios.usuario_id"), nullable=False)
