@@ -5,8 +5,9 @@ from app.database.connection import Base
 class Secretaria(Base):
     __tablename__ = "secretarias"
 
-    id_secretaria = Column(Integer, primary_key=True, index=True)
+    secretaria_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     nome = Column(String(45), nullable=False)
     cpf = Column(String(14), nullable=False, unique=True)
     rg = Column(String(15), nullable=False)
-    usuario_id = Column(Integer, ForeignKey("usuarios.id_usuario"), nullable=False)
+    
+    usuario = Column(Integer, ForeignKey("usuarios.usuario_id"), nullable=False)

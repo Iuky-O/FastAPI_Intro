@@ -4,7 +4,7 @@ from app.database.connection import Base
 class Paciente(Base):
     __tablename__ = "pacientes"
 
-    id_paciente = Column(Integer, primary_key=True, index=True)
+    paciente_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     nome = Column(String(255), nullable=False)
     data_nascimento = Column(String(10), nullable=False)
     rg = Column(String(45), nullable=False)

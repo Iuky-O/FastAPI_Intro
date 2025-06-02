@@ -5,7 +5,7 @@ from app.database.connection import Base
 class Medico(Base):
     __tablename__ = "medicos"
 
-    id_medico = Column(Integer, primary_key=True, index=True)
+    medico_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     nome = Column(String(45), nullable=False)
     cpf = Column(String(14), nullable=False, unique=True)
     rg = Column(String(45), nullable=False)
@@ -13,5 +13,5 @@ class Medico(Base):
     crm_numero = Column(String(45), nullable=False, unique=True)
     crm_UF = Column(String(45), nullable=False)
 
-    usuario_id = Column(Integer, ForeignKey("usuarios.id_usuario"), nullable=False)
-    areas_idareas = Column(Integer, ForeignKey("areas.id_area"), nullable=False)
+    usuario = Column(Integer, ForeignKey("usuarios.usuario_id"), nullable=False)
+    areas = Column(Integer, ForeignKey("areas.area_id"), nullable=False)
