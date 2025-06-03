@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, ForeignKey, String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from app.database.connection import Base
 
@@ -10,4 +10,6 @@ class ExameImagem(Base):
     descricao = Column(String(45))
     link_imagem = Column(String(45))
 
+    medicamento = relationship("Medicamento", back_populates="exame_imagem")
+    upload_imagem = relationship("UploadExameImagem", back_populates="exame_imagem")
 

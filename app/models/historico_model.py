@@ -8,4 +8,6 @@ class Historico(Base):
     historico_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     modificacao = Column(String(45), nullable=False)
     data_modificacao = Column(String(20), nullable=False)
-    prontuario = Column(Integer, ForeignKey('prontuarios.prontuario_id'), nullable=False)
+    prontuario_id = Column(Integer, ForeignKey('prontuarios.prontuario_id'), nullable=False)
+
+    prontuario = relationship("Prontuario", back_populates="historico")

@@ -9,4 +9,5 @@ class AnaliseExameClinico(Base):
     titulo = Column(String(40), nullable=False)
     data_analise = Column(String(20), nullable=False)
 
-    predicao = Column(Integer, ForeignKey('predicoes_risco_exame_clinico.predicao_id'), nullable=False)
+    predicao_id = Column(Integer, ForeignKey('predicoes_risco_exame_clinico.predicao_id'), nullable=False)
+    predicao = relationship("PredicaoExameClinico", back_populates="analises")

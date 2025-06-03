@@ -1,5 +1,5 @@
-#Aqui fica o modelo do user (tabela do banco de dados)
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from app.database.connection import Base
 
 class Usuario(Base):
@@ -10,3 +10,8 @@ class Usuario(Base):
     senha = Column(String(45), nullable=False)
     nome = Column(String(45), nullable=False)
     telefone = Column(String(45), nullable=False)
+
+    #Relacionamentos
+    medicos = relationship("Medico", back_populates="usuario")
+    secretarias = relationship("Secretaria", back_populates="usuario")
+    admins = relationship("Administrador", back_populates="usuario")

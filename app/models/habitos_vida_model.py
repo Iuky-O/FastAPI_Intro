@@ -19,5 +19,6 @@ class HabitosVida(Base):
     diu = Column(Boolean, nullable=True)
     diu_anos = Column(Integer, nullable=True)
 
-    prontuario = Column(Integer, ForeignKey('prontuarios.prontuario_id'), nullable=False)
+    prontuario_id = Column(Integer, ForeignKey('prontuarios.prontuario_id'), nullable=False)
 
+    prontuario = relationship("Prontuario", back_populates="habitos_vida")
