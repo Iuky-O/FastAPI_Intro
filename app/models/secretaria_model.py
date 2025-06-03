@@ -10,4 +10,7 @@ class Secretaria(Base):
     cpf = Column(String(14), nullable=False, unique=True)
     rg = Column(String(15), nullable=False)
     
-    usuario = Column(Integer, ForeignKey("usuarios.usuario_id"), nullable=False)
+    usuario_id = Column(Integer, ForeignKey("usuarios.usuario_id"), nullable=False)
+    
+    usuario = relationship("Usuario", back_populates="secretarias")
+    consultas = relationship("Consulta", back_populates="secretaria")

@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean
 from app.database.connection import Base
+from sqlalchemy.orm import relationship
 
 class Paciente(Base):
     __tablename__ = "pacientes"
@@ -14,3 +15,5 @@ class Paciente(Base):
     telefone = Column(String(45), nullable=False)
     email = Column(String(45), nullable=False, unique=True)
     plano_saude = Column(Boolean, nullable=False)
+
+    consultas = relationship("Consulta", back_populates="paciente")

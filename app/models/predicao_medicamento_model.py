@@ -8,3 +8,6 @@ class PredicaoMedicamento(Base):
     predicao_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     predicao_medicamento = Column(String(50), nullable=False)
     data_predicao = Column(String(10), nullable=False)
+
+    analises = relationship("AnaliseMedicamento", back_populates="predicao")
+
