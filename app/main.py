@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from app.database.create_db import create_tables
 from app.database.connection import SessionLocal
 from sqlalchemy import text
-from app.views import usuario_view, medico_view, area_view, secretaria_view
+from app.views import usuario_view, medico_view, area_view, secretaria_view, pacient_view
 
 
 app = FastAPI()
@@ -27,3 +27,4 @@ app.include_router(usuario_view.router, prefix="/usuarios", tags=["Usuários"])
 app.include_router(medico_view.router, prefix="/medicos", tags=["Médicos"])
 app.include_router(secretaria_view.router, prefix="/secretaria", tags=["Secretárias"])
 app.include_router(area_view.router, prefix="/areas", tags=["Áreas"])
+app.include_router(pacient_view.router, prefix="/pacientes", tags=["Pacientes"])
