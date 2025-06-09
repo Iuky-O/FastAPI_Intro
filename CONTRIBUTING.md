@@ -119,3 +119,22 @@ Em uma pasta onde deseja por seu repositório abra no terminal e faça:
 - Será feito apenas após testes e validação de que o sistema está estável.
 
 - Somente via Pull Request.
+
+# Migrações
+
+1. **Inicialização**
+
+```bash
+alembic init alembic
+```
+2. **Mude o sqlalchemy.url**
+```bash
+sqlalchemy.url = url de conexão com postgres
+```
+
+3. **Primeira migração**
+
+```bash
+alembic revision --autogenerate -m "Inicialização"
+alembic upgrade head
+```

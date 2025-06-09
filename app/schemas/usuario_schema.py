@@ -8,7 +8,7 @@ class User(BaseModel):
     telefone: str
 
 class UserPublic(BaseModel):
-    id_usuario: int
+    usuario_id: int
     nome: str
     telefone: str
     email: EmailStr
@@ -22,5 +22,3 @@ class UserUpdate(BaseModel):
     email: Optional[EmailStr]
     senha: Optional[str]
 
-class UsuarioOut(UserPublic):
-    pass

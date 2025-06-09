@@ -14,11 +14,3 @@ def create_tables():
 
 if __name__ == "__main__":
     create_tables()
-
-# import asyncio
-# from app.database.connection import engine
-# from app.database.connection import Base
-
-# async def create_tables():
-#     async with engine.begin() as conn:
-#         await conn.run_sync(Base.metadata.create_all)

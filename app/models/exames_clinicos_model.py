@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, Boolean
 from sqlalchemy.orm import relationship
 from app.database.connection import Base
 
@@ -21,4 +21,6 @@ class ExamesClinicos(Base):
     schiller = Column(Boolean, nullable=True)
     citologia = Column(Boolean, nullable=True)
     biopsia = Column(Boolean, nullable=True)
+
+    medicamento = relationship("Medicamento", back_populates="exame_clinico")
 

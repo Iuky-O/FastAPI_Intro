@@ -10,3 +10,4 @@ secrets.toml
 settings.toml
 .settings.toml
 db.sqlite3
+alembic.ini

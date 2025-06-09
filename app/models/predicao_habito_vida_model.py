@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from app.database.connection import Base
 
@@ -8,3 +8,5 @@ class PredicaoHabitoVida(Base):
     predicao_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     risco = Column(String(10), nullable=False)
     data_analise = Column(String(20), nullable=False)
+
+    analises = relationship("AnaliseHabitoVida", back_populates="predicao")
