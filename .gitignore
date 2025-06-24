@@ -11,3 +11,7 @@ settings.toml
 .settings.toml
 db.sqlite3
 alembic.ini
+uploads/
+__pycache__/
+__pycache__
+*.pyc

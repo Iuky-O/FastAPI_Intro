@@ -80,6 +80,7 @@ app/models/__pycache__/upload_prontuario_model.cpython-312.pyc
 app/models/__pycache__/usuario_model.cpython-312.pyc
 app/schemas/__init__.py
 app/schemas/area_schema.py
+app/schemas/exame_imagem_schema.py
 app/schemas/medico_schema.py
 app/schemas/paciente_schema.py
 app/schemas/secretaria_schema.py
@@ -95,15 +96,18 @@ app/security/auth.py
 app/security/security.py
 app/utils/__init__.py
 app/utils/validar_status_area.py
+app/utils/__pycache__/__init__.cpython-312.pyc
 app/utils/__pycache__/validar_status_area.cpython-312.pyc
 app/views/__init__.py
 app/views/area_view.py
+app/views/image_coposcopi_view.py
 app/views/medico_view.py
 app/views/pacient_view.py
 app/views/secretaria_view.py
 app/views/usuario_view.py
 app/views/__pycache__/__init__.cpython-312.pyc
 app/views/__pycache__/area_view.cpython-312.pyc
+app/views/__pycache__/image_coposcopi_view.cpython-312.pyc
 app/views/__pycache__/medico_view.cpython-312.pyc
 app/views/__pycache__/pacient_view.cpython-312.pyc
 app/views/__pycache__/secretaria_view.cpython-312.pyc

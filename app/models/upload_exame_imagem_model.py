@@ -7,7 +7,7 @@ class UploadExameImagem(Base):
 
     upload_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     titulo = Column(String(45), nullable=False)
-    upload = Column(String(45), nullable=False)
+    upload = Column(String(255), nullable=False)
     exame_imagem_id = Column(Integer, ForeignKey('exames_imagem.exame_id'), nullable=False)
 
     exame_imagem = relationship("ExameImagem", back_populates="upload_imagem")
