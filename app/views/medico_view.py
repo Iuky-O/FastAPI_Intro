@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.database.connection import SessionLocal
-from app.schemas.usuario_schema import UserPublic, User
 from app.schemas.medico_schema import MedicoPublic, MedicoBase, MedicoGet
 from http import HTTPStatus
+from app.database.connection import SessionLocal
 
 from app.controllers.medico_controller import (
         criar_medico,
