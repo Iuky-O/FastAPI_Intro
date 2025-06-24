@@ -9,6 +9,7 @@ colorama==0.4.6
 cryptography==44.0.2
 databases==0.9.0
 dnspython==2.7.0
+dotenv==0.9.9
 dynaconf==3.2.10
 ecdsa==0.19.1
 email-validator==2.2.0
@@ -29,7 +30,9 @@ pycparser==2.22
 pydantic[email]==2.6.4
 pydantic-core==2.16.3
 pygments==2.19.1
+python-dotenv==1.1.0
 python-jose[cryptography]==3.4.0
+python-multipart==0.0.20
 rich==14.0.0
 rsa==4.9.1
 shellingham==1.5.4

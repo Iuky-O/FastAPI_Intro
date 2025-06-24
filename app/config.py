@@ -11,4 +11,5 @@ settings = Dynaconf(                                        #criando o objeto se
     environments=["development", "production", "testing"],  #definindo ambientes disponíveis na aplicação (depois podemos ativar como APP_ENV=production)
     env_switcher="APP_ENV",                                 #nome da variável de ambiente que ativa nosso ambiente virtual(exemplo de cima)
     load_dotenv=True,                                      #Dizendo para não carregar automaticamente arquivos .env
+    
 )

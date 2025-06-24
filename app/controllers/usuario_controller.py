@@ -2,9 +2,18 @@ from sqlalchemy.orm import Session
 from app.models.usuario_model import Usuario
 from app.schemas.usuario_schema import User, UserUpdate
 from fastapi import HTTPException
+from app.services.auth_service import gerar_hash_senha 
 
 def criar_usuario(db: Session, usuario: User):
-    novo_usuario = Usuario(**usuario.dict())
+    senha_hash = gerar_hash_senha(usuario.senha)
+
+    novo_usuario = Usuario(
+        nome=usuario.nome,
+        email=usuario.email,
+        telefone=usuario.telefone,
+        senha=senha_hash,
+    )
+
     db.add(novo_usuario)
     db.commit()
     db.refresh(novo_usuario)
@@ -25,6 +34,8 @@ def alterar_usuario(db: Session, user_id: int, dados: UserUpdate):
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     
     for key, value in dados.dict(exclude_unset=True).items():
+        if key == "senha" and value:
+            value = gerar_hash_senha(value)
         setattr(usuario, key, value)
 
     db.commit()
